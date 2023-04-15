@@ -25,7 +25,7 @@ function App() {
             <TopBar toggleInitialModal={setInitialModalIsOpen}/>
             {t.title}
             <button onClick={changeLanguage}>Lingua</button>
-            <Modal isOpen={initialModalIsOpen} setIsOpen={setInitialModalIsOpen} beforeTitle={<ToggleButton toggleFunction={changeLanguage}/>} title={t.initialModalTitle} closeButtonText={t.initialModalCloseButton}>{t.initialModalDescription}</Modal>
+            <Modal  isOpen={initialModalIsOpen} setIsOpen={setInitialModalIsOpen} beforeTitle={<ToggleButton toggleFunction={changeLanguage}/>} title={t.initialModalTitle} closeButtonText={t.initialModalCloseButton}>{t.initialModalDescription}</Modal>
         </div>
     )
 }

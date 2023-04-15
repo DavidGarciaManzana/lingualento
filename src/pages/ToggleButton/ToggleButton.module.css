@@ -1,17 +1,9 @@
-.blue {
+.mx {
     background: radial-gradient(ellipse at center, #006341, #ffffff, #ce1126);
-
 }
 
-.gray {
-    /*background-color: #EDF2F7;*/
-
-    /*background: linear-gradient(to right, #bf0a30, #ffffff, #002868);*/
-    /*background-size: 100% 100%;*/
+.us {
     background: radial-gradient(ellipse at center, #bf0a30, #ffffff, #002868);
-    /*background-position: center;*/
-    /*background-size: cover;*/
-    /*background-repeat: no-repeat;*/
 }
 
 .switch {
@@ -53,12 +45,12 @@
     border-width: 0;
 }
 
-.translate6 {
+.translateRight {
     transform: translateX(50%);
     background-image: url("https://purecatamphetamine.github.io/country-flag-icons/3x2/MX.svg");
 }
 
-.translate1 {
+.translateLeft {
     transform: translateX(-50%);
     background-image: url("https://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg");
 }
