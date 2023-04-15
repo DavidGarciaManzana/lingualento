@@ -15,13 +15,14 @@
 }
 
 .switch {
+    -webkit-tap-highlight-color: transparent;
     width: 74px;
     height: 38px;
     flex-shrink: 0;
     cursor: pointer;
     border: 2px solid transparent;
     border-radius: 9999px;
-    transition-property: color;
+    /*transition-property: color;*/
     transition-duration: 200ms;
     transition-timing-function: ease-in-out;
     outline: none;
