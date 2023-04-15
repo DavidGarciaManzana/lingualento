@@ -2,8 +2,9 @@ import {useState} from 'react'
 import styles from '@/pages/Modal/Modal.module.css'
 import {Dialog} from '@headlessui/react'
 
-function Modal({title, description, children}) {
-    let [isOpen, setIsOpen] = useState(true)
+function Modal({isOpen=true,setIsOpen,beforeTitle='',title, description,closeButtonText, children}) {
+    console.log(isOpen)
+    // let [isOpen, setIsOpen] = useState(true)
 
     return (
         <Dialog className={styles.modalContainer} open={isOpen} onClose={() => setIsOpen(false)}>
@@ -17,7 +18,8 @@ function Modal({title, description, children}) {
                 <div className={styles.panelContainer}>
 
                     <Dialog.Panel className={styles.panel}>
-                        <Dialog.Title>{title}</Dialog.Title>
+                        {beforeTitle}
+                        <Dialog.Title style={{textAlign:"center"}}>{title}</Dialog.Title>
                         <Dialog.Description>
                             {description}
                         </Dialog.Description>
@@ -26,7 +28,7 @@ function Modal({title, description, children}) {
                             {children}
                         </p>
                         <br/>
-                        <button onClick={() => setIsOpen(false)}>Got it, thanks!</button>
+                        <button onClick={() => setIsOpen(false)}>{closeButtonText}</button>
                     </Dialog.Panel>
                 </div>
             </div>

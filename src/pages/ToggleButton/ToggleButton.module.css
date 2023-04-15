@@ -1,0 +1,79 @@
+.blue {
+    background: radial-gradient(ellipse at center, #006341, #ffffff, #ce1126);
+
+}
+
+.gray {
+    /*background-color: #EDF2F7;*/
+
+    /*background: linear-gradient(to right, #bf0a30, #ffffff, #002868);*/
+    /*background-size: 100% 100%;*/
+    background: radial-gradient(ellipse at center, #bf0a30, #ffffff, #002868);
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+}
+
+.switch {
+    width: 74px;
+    height: 38px;
+    flex-shrink: 0;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 9999px;
+    transition-property: color;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    outline: none;
+    box-shadow: none;
+}
+
+.switch:focus,
+.switch:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+.switch:focus-visible {
+    ring-width: 2px;
+    ring-color: white;
+    ring-opacity: 0.75;
+}
+
+.srOnly {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.translate6 {
+    transform: translateX(50%);
+    background-image: url("https://purecatamphetamine.github.io/country-flag-icons/3x2/MX.svg");
+}
+
+.translate1 {
+    transform: translateX(-50%);
+    background-image: url("https://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg");
+}
+
+.ball {
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    /*transform: none;*/
+    border-radius: 9999px;
+    /*background-color: #fff;*/
+    transition: all 0.3s ease;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
