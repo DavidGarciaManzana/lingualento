@@ -3,7 +3,7 @@ import styles from '@/pages/Hero/Hero.module.css'
 import ToggleButton from "@/pages/ToggleButton/ToggleButton";
 import LanguageToggleButton from "@/pages/LanguageToggleButton/LanguageToggleButton";
 
-function Hero({salute,text,button}) {
+function Hero({openModal,salute,text,button}) {
     return (<div className={styles.bg}>
             <img className={styles.heroImage} src="sloth.png" alt=""/>
             <div className={styles.content}>
@@ -13,7 +13,7 @@ function Hero({salute,text,button}) {
                 </span>
 
                 <p>{text}</p>
-                <button>{button}</button>
+                <button onClick={()=>{openModal(true)}}>{button}</button>
             </div>
         </div>)
 }

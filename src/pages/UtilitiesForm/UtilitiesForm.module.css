@@ -1,0 +1,23 @@
+.textBox {
+    display: block;
+    height: 50svh;
+    width: 50svw;
+    margin-bottom: 50px;
+}
+.utilitiesForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.tone {
+    display: block;
+    /*text-align: center;*/
+}
+
+.format {
+    display: block;
+}
+.size {
+    display: block;
+}

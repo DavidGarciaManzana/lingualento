@@ -22,6 +22,7 @@
 }
 .panelContainer {
     display: flex;
+    flex-direction: column;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
@@ -29,6 +30,7 @@
 
 }
 .panel {
+    min-width: 60svw;
     max-width: 1024px;
     position: relative;
     background: white;

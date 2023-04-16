@@ -5,33 +5,40 @@ import es from "@/languages/es/es";
 import Modal from "@/pages/Modal/Modal";
 import styles from '@/pages/App/App.module.css'
 import TopBar from "@/pages/TopBar/TopBar";
-import ToggleButton from "@/pages/ToggleButton/ToggleButton";
 import Hero from '@/pages/Hero/Hero'
 import LanguageToggleButton from "@/pages/LanguageToggleButton/LanguageToggleButton";
-function App() {
-    const [initialModalIsOpen, setInitialModalIsOpen] = React.useState(true)
+import TextForm from "@/pages/TextForm/TextForm";
+import UtilitiesForm from "@/pages/UtilitiesForm/UtilitiesForm";
 
-    const router = useRouter()
+function App() {
+    const [textToFormat, setTextToFormat] = React.useState('')
+
+    const [initialModalIsOpen, setInitialModalIsOpen] = React.useState(false)
+    const [inputTextModal, setInputTextModal] = React.useState(false)
+    const [inputSelectModal, setInputSelectModal] = React.useState(false)
+
+
+
+
     const {locale} = useRouter();
     const t = locale === 'en' ? en : es
-    let changeLanguage = () => {
 
-        if (locale === 'en') {
-            router.push('/', '/', {locale: 'es'})
-        } else {
-            router.push('/', '/', {locale: 'en'})
-        }
-
-    };
     return (
         <div className={styles.app}>
             <Modal isOpen={initialModalIsOpen} setIsOpen={setInitialModalIsOpen}
                    beforeTitle={<LanguageToggleButton/>} title={t.initialModalTitle}
                    closeButtonText={t.initialModalCloseButton}>{t.initialModalDescription}</Modal>
+            <Modal isOpen={inputTextModal} setIsOpen={setInputTextModal}>
+                <TextForm text={textToFormat} setText={setTextToFormat} beforeModal={setInputTextModal}
+                          nextModal={setInputSelectModal}></TextForm>
+            </Modal>
+            <Modal isOpen={inputSelectModal} setIsOpen={setInputSelectModal}>
+                <UtilitiesForm setText={setTextToFormat} beforeModal={setInputSelectModal}></UtilitiesForm>
 
+
+            </Modal>
             <TopBar toggleInitialModal={setInitialModalIsOpen}/>
-            <Hero salute={t.heroWelcome} text={t.heroText} button={t.heroButton}></Hero>
-
+            <Hero openModal={setInputTextModal} salute={t.heroWelcome} text={t.heroText} button={t.heroButton}></Hero>
         </div>
     )
 }
