@@ -1,4 +1,5 @@
 .textBox {
+    resize: none;
     display: block;
     height: 50svh;
     width: 50svw;
