@@ -2,7 +2,7 @@ import {useState} from 'react'
 import styles from '@/pages/Modal/Modal.module.css'
 import {Dialog} from '@headlessui/react'
 
-function Modal({isOpen=true,setIsOpen,beforeTitle='',title, description,closeButtonText, children}) {
+function Modal({scrollBar=false,isOpen=true,setIsOpen,beforeTitle='',title, description,closeButtonText, children}) {
     // console.log(isOpen)
     // let [isOpen, setIsOpen] = useState(true)
 
@@ -12,7 +12,9 @@ function Modal({isOpen=true,setIsOpen,beforeTitle='',title, description,closeBut
             <div className={styles.backdrop} aria-hidden="true" onClick={() => setIsOpen(false)}/>
 
             {/* Full-screen scrollable container */}
-            <div className={styles.scrollableContainer}>
+            <div className={`${
+                scrollBar ? styles.scrollableContainer : styles.notScrollableContainer
+            }`} >
 
                 {/* Container to center the panel */}
                 <div className={styles.panelContainer}>
@@ -28,7 +30,7 @@ function Modal({isOpen=true,setIsOpen,beforeTitle='',title, description,closeBut
                             {children}
                         </p>
                         <br/>
-                        <button onClick={() => setIsOpen(false)}>{closeButtonText}</button>
+                        {closeButtonText && <button onClick={() => setIsOpen(false)}>{closeButtonText}</button>}
                     </Dialog.Panel>
                 </div>
             </div>

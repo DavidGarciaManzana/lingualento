@@ -25,7 +25,7 @@ function App() {
 
     return (
         <div className={styles.app}>
-            <Modal isOpen={initialModalIsOpen} setIsOpen={setInitialModalIsOpen}
+            <Modal scrollBar={true} isOpen={initialModalIsOpen} setIsOpen={setInitialModalIsOpen}
                    beforeTitle={<LanguageToggleButton/>} title={t.initialModalTitle}
                    closeButtonText={t.initialModalCloseButton}>{t.initialModalDescription}</Modal>
             <Modal isOpen={inputTextModal} setIsOpen={setInputTextModal}>
