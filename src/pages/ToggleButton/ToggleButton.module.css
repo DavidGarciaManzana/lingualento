@@ -1,10 +1,11 @@
-.mx {
-    background: radial-gradient(ellipse at center, #006341, #ffffff, #ce1126);
+.first {
+    background-color: mintcream;
+}
+.second {
+    background: skyblue;
 }
 
-.us {
-    background: radial-gradient(ellipse at center, #bf0a30, #ffffff, #002868);
-}
+
 
 .switch {
     -webkit-tap-highlight-color: transparent;
@@ -47,12 +48,12 @@
 
 .translateRight {
     transform: translateX(50%);
-    background-image: url("https://purecatamphetamine.github.io/country-flag-icons/3x2/MX.svg");
+    background-color: violet;
 }
 
 .translateLeft {
     transform: translateX(-50%);
-    background-image: url("https://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg");
+    background-color: coral;
 }
 
 .ball {

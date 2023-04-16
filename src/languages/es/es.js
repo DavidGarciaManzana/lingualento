@@ -14,6 +14,8 @@ export default {
         '\n' +
         'El texto formateado se mostrará en una pantalla separada, donde el usuario podrá copiarlo y pegarlo en el lugar que desee.',
     initialModalCloseButton: 'Vamos a darle!',
-    title: 'Bienvenido a Lingualento'
+    heroWelcome: '¡Hola!',
+    heroText: '¿Que vamos a escribir ahora?',
+    heroButton: 'Comenzemos'
 
 }

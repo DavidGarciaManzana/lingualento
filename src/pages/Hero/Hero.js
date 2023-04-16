@@ -1,0 +1,21 @@
+import React from 'react'
+import styles from '@/pages/Hero/Hero.module.css'
+import ToggleButton from "@/pages/ToggleButton/ToggleButton";
+import LanguageToggleButton from "@/pages/LanguageToggleButton/LanguageToggleButton";
+
+function Hero({salute,text,button}) {
+    return (<div className={styles.bg}>
+            <img className={styles.heroImage} src="sloth.png" alt=""/>
+            <div className={styles.content}>
+                <span className={styles.firstMessage}>
+                    <h2>{salute}</h2>
+                    <LanguageToggleButton></LanguageToggleButton>
+                </span>
+
+                <p>{text}</p>
+                <button>{button}</button>
+            </div>
+        </div>)
+}
+
+export default Hero

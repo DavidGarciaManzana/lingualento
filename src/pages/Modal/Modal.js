@@ -3,13 +3,13 @@ import styles from '@/pages/Modal/Modal.module.css'
 import {Dialog} from '@headlessui/react'
 
 function Modal({isOpen=true,setIsOpen,beforeTitle='',title, description,closeButtonText, children}) {
-    console.log(isOpen)
+    // console.log(isOpen)
     // let [isOpen, setIsOpen] = useState(true)
 
     return (
         <Dialog className={styles.modalContainer} open={isOpen} onClose={() => setIsOpen(false)}>
             {/* The backdrop, rendered as a fixed sibling to the panel container */}
-            <div className={styles.backdrop} aria-hidden="true"/>
+            <div className={styles.backdrop} aria-hidden="true" onClick={() => setIsOpen(false)}/>
 
             {/* Full-screen scrollable container */}
             <div className={styles.scrollableContainer}>

@@ -1,0 +1,21 @@
+.bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /*justify-content: center;*/
+    align-items: center;
+    margin: -70px;
+    height: 100svh;
+    background: rgb(117,119,97);
+    background: linear-gradient(0deg, rgba(117,119,97,1) 0%, rgba(221,219,168,1) 30%, rgba(221,219,168,1) 75%, rgba(184,225,255,1) 100%);
+}
+
+.heroImage {
+    height: 50%;
+}
+.content {
+}
+.firstMessage h2 {
+    display: inline-block;
+    margin-right: 20px;
+}

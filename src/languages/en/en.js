@@ -14,5 +14,7 @@ export default {
         '\n' +
         'The formatted text will be displayed on a separate screen, where the user can copy and paste it wherever they want.',
     initialModalCloseButton: 'Got it, thanks!',
-    title: 'Welcome to Lingualento'
+    heroWelcome: 'Hello!',
+    heroText:'Style your text like a pro!',
+    heroButton: 'Get Started!'
 }
