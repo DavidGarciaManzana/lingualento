@@ -1,10 +1,16 @@
-import {useState} from 'react'
 import styles from '@/pages/Modal/Modal.module.css'
 import {Dialog} from '@headlessui/react'
 
-function Modal({scrollBar=false,isOpen=true,setIsOpen,beforeTitle='',title, description,closeButtonText, children}) {
-    // console.log(isOpen)
-    // let [isOpen, setIsOpen] = useState(true)
+function Modal({
+                   scrollBar = false,
+                   isOpen = true,
+                   setIsOpen,
+                   beforeTitle = null,
+                   title,
+                   description,
+                   closeButtonText,
+                   children
+               }) {
 
     return (
         <Dialog className={styles.modalContainer} open={isOpen} onClose={() => setIsOpen(false)}>
@@ -14,21 +20,24 @@ function Modal({scrollBar=false,isOpen=true,setIsOpen,beforeTitle='',title, desc
             {/* Full-screen scrollable container */}
             <div className={`${
                 scrollBar ? styles.scrollableContainer : styles.notScrollableContainer
-            }`} >
+            }`}>
 
                 {/* Container to center the panel */}
                 <div className={styles.panelContainer}>
 
                     <Dialog.Panel className={styles.panel}>
                         {beforeTitle}
-                        <Dialog.Title style={{textAlign:"center"}}>{title}</Dialog.Title>
+                        <Dialog.Title style={{textAlign: "center"}}>{title}</Dialog.Title>
                         <Dialog.Description>
                             {description}
                         </Dialog.Description>
 
-                        <p style={{textAlign: "center"}}>
+                        <div style={{
+                            textAlign: "center", display: 'flex'
+                            , flexDirection: 'column'
+                        }}>
                             {children}
-                        </p>
+                        </div>
                         <br/>
                         {closeButtonText && <button onClick={() => setIsOpen(false)}>{closeButtonText}</button>}
                     </Dialog.Panel>

@@ -1,19 +1,48 @@
 import React from "react";
 import styles from '@/pages/UtilitiesForm/UtilitiesForm.module.css'
+import useChatGPTAPI from "@/hooks/useChatGPTAPI";
 
-function UtilitiesForm ({setText,beforeModal,nextModal}){
+function UtilitiesForm({textToFormat, handleData, handleError, handleLoading, setText, beforeModal}) {// todo agregar el parametro nextModal
     const [range, setRange] = React.useState(0);
-    const [tone, setTone] = React.useState('');
-    const [format, setFormat] = React.useState('');
+    const [rangeText, setRangeText] = React.useState('small');
+    const [tone, setTone] = React.useState('Professional');
+    const [format, setFormat] = React.useState('Email');
+    React.useEffect(() => {
+        console.log(rangeText)
+        console.log('tipo del mensaje',typeof(textToFormat))
+    }, [rangeText])
     const handleRangeChange = (event) => {
         setRange(event.target.valueAsNumber);
+        if (event.target.valueAsNumber === 0) {
+            setRangeText('small')
+        } else if (event.target.valueAsNumber === 1) {
+            setRangeText('medium')
+        } else if (event.target.valueAsNumber === 2) {
+            setRangeText('large')
+        }
     };
+    const {handleTextAPI} = useChatGPTAPI({textToFormat, rangeText, tone, format});
     return (
-        <form className={styles.utilitiesForm} onSubmit={() => {
+        <form className={styles.utilitiesForm} onSubmit={(event) => {
+            event.preventDefault();
+            handleLoading(true)
             beforeModal(false)
-            //todo call the api with the data textToFormat,tone,format and range
+
+            async function someFunction() {
+                try {
+                    const data = await handleTextAPI();
+                    handleLoading(false)
+                    handleData(data)
+                } catch (error) {
+                    handleLoading(false)
+                    handleError(error)
+                    console.log('ENTIENDE QUE AQUI HAY UN ERROOOOOOR')
+                }
+            }
+
+            someFunction()
             setText('')
-            setRange('')
+            setRange(0)
             setTone('')
             setFormat('')
         }}>
