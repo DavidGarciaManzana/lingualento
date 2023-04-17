@@ -1,39 +1,25 @@
 import React from "react"
-import {useRouter} from "next/router";
 // import en from '../../languages/en/en';
 // import es from '../../languages/es/es';
-import en from "@/languages/en/en";
-import es from "@/languages/es/es";
 import Modal from "@/pages/Modal/Modal";
-// import Modal from "../Modal/Modal";
 import styles from '@/pages/App/App.module.css'
 import TopBar from "@/pages/TopBar/TopBar";
-// import TopBar from "../TopBar/TopBar";
 import Hero from '@/pages/Hero/Hero'
-// import Hero from '../Hero/Hero'
 import LanguageToggleButton from "@/pages/LanguageToggleButton/LanguageToggleButton";
-// import LanguageToggleButton from "../LanguageToggleButton/LanguageToggleButton";
 import TextForm from "@/pages/TextForm/TextForm";
-// import TextForm from "../TextForm/TextForm";
 import UtilitiesForm from "@/pages/UtilitiesForm/UtilitiesForm";
-// import UtilitiesForm from "../UtilitiesForm/UtilitiesForm";
 import Loader from '@/pages/Loader/Loader'
-// import Loader from '../Loader/Loader'
+import {LanguageContext} from '@/LanguageProvider/LanguageProvider'
 
 
 function App() {
-
+    const {t} = React.useContext(LanguageContext);
     const [textToFormat, setTextToFormat] = React.useState('')
 
-    const [initialModalIsOpen, setInitialModalIsOpen] = React.useState(false)
+    const [initialModalIsOpen, setInitialModalIsOpen] = React.useState(true)
     const [inputTextModal, setInputTextModal] = React.useState(false)
     const [inputSelectModal, setInputSelectModal] = React.useState(false)
 
-
-    const {locale} = useRouter();
-    const t = locale === 'en' ? en : es
-
-    // const { data, error, isLoading } = useChatGPTAPI();
 
 
     const [data, setData] = React.useState('');
@@ -81,8 +67,18 @@ function App() {
 
     return (<div className={styles.app}>
             <Modal scrollBar={true} isOpen={initialModalIsOpen} setIsOpen={setInitialModalIsOpen}
-                   beforeTitle={<LanguageToggleButton/>} title={t.initialModalTitle}
-                   closeButtonText={t.initialModalCloseButton}>{t.initialModalDescription}</Modal>
+                   beforeTitle={<LanguageToggleButton/>} title={t?.initialModalTitle}
+                   closeButtonText={t?.initialModalCloseButton}>{t?.initialModalWelcome}
+                <h3>{t?.instructions}</h3>
+            <ol className={styles.orderList}>
+                <li>{t?.firstInstruction}</li>
+                <li>{t?.secondInstruction}</li>
+                <li>{t?.thirdInstruction}</li>
+                <li>{t?.fourthInstruction}</li>
+                <li>{t?.fifthInstruction}</li>
+                <li>{t?.sixthInstruction}</li>
+            </ol>
+            </Modal>
             <Modal isOpen={inputTextModal} setIsOpen={setInputTextModal}>
                 <TextForm text={textToFormat} setText={setTextToFormat} beforeModal={setInputTextModal}
                           nextModal={setInputSelectModal}></TextForm>
@@ -98,7 +94,7 @@ function App() {
 
 
             <Modal isOpen={isDataModalOpen} setIsOpen={setIsDataModalOpen} title={"Here's your message :)"}>
-                <textarea style={{height: '50svh'}} ref={finalAnswerRef} disabled={true} className={styles.response}
+                <textarea style={{height: '50svh'}} ref={finalAnswerRef} className={styles.response}
                           value={data}></textarea>
                 <button onClick={handleCopy}>Copy to clipboard</button>
             </Modal>
@@ -110,7 +106,7 @@ function App() {
 
 
             <TopBar toggleInitialModal={setInitialModalIsOpen}/>
-            <Hero openModal={setInputTextModal} salute={t.heroWelcome} text={t.heroText} button={t.heroButton}></Hero>
+            <Hero openModal={setInputTextModal} salute={t?.heroWelcome} text={t?.heroText} button={t?.heroButton}></Hero>
         </div>)
 }
 

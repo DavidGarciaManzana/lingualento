@@ -1,11 +1,12 @@
 .first {
     background: radial-gradient(ellipse at center, #bf0a30, #ffffff, #002868);
 }
-
-
-.second {
-    background: radial-gradient(ellipse at center, #006341, #ffffff, #ce1126);
+/*todo remove important*/
+ .second {
+    background: radial-gradient(ellipse at center, #006341, #ffffff, #ce1126) !important;
 }
+
+
 
 
 .translateRight {

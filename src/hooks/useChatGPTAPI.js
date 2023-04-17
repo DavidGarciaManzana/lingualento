@@ -1,10 +1,18 @@
 import React from 'react';
 import axios from "axios";
+import {useRouter} from "next/router";
 
 const TEXTENDPOINT = 'https://api.openai.com/v1/chat/completions';
 
 function UseChatGPTAPI({textToFormat,rangeText,tone,format}) {
-    const promting = `${process.env.NEXT_PUBLIC_ENGLISHTEXTPROMPT} ${textToFormat}, ${tone}, ${format}, and  ${rangeText}.`
+    const {locale} = useRouter();
+    let promting;
+    if(locale==='en'){
+        promting= `${process.env.NEXT_PUBLIC_ENGLISHTEXTPROMPT} ${textToFormat}, ${tone}, ${format}, and  ${rangeText}.`
+    } else if (locale === 'es'){
+        promting= `${process.env.NEXT_PUBLIC_SPANISHTEXTPROMPT} ${textToFormat}, ${tone}, ${format}, y ${rangeText}.`
+    }
+
 console.log(promting)
     async function handleTextAPI() {
 

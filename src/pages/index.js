@@ -1,17 +1,17 @@
-
-// import '../styles/Home.module.css'
-import styles from '@/styles/Home.module.css'
 // import '/App/App'
 // import App from '../pages/App/App'
+import React from "react"
 import App from '@/pages/App/App'
-
+import LanguageProvider from "@/LanguageProvider/LanguageProvider";
 
 
 export default function Home() {
 
     return (
         <>
-            <App/>
+            <LanguageProvider>
+                <App />
+            </LanguageProvider>
         </>
     )
 }
