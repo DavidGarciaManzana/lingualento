@@ -34,6 +34,7 @@ function App() {
             setIsDataModalOpen(true)
         }
     }, [data])
+
     React.useEffect(() => {
         if (error) {
             setIsErrorModalOpen(true)
@@ -94,8 +95,8 @@ function App() {
 
 
             <Modal isOpen={isDataModalOpen} setIsOpen={setIsDataModalOpen} title={"Here's your message :)"}>
-                <textarea style={{height: '50svh'}} ref={finalAnswerRef} autoFocus={false}
-                          value={data}></textarea>
+                <textarea style={{height: '30svh'}} ref={finalAnswerRef} autoFocus={false}
+                          value={data} onChange={(e)=>{setData(e.target.value)}}></textarea>
                 <button onClick={handleCopy}>Copy to clipboard</button>
             </Modal>
             <Modal isOpen={isErrorModalOpen} setIsOpen={setIsErrorModalOpen} title={"Something went wrong"}

@@ -1,3 +1,4 @@
+import React from 'react'
 import styles from '@/pages/Modal/Modal.module.css'
 import {Dialog} from '@headlessui/react'
 
@@ -11,9 +12,10 @@ function Modal({
                    closeButtonText,
                    children
                }) {
+    const titleRef = React.useRef()
 
     return (
-        <Dialog className={styles.modalContainer} open={isOpen} onClose={() => setIsOpen(false)}>
+        <Dialog initialFocus={titleRef} className={styles.modalContainer} open={isOpen} onClose={() => setIsOpen(false)}>
             {/* The backdrop, rendered as a fixed sibling to the panel container */}
             <div className={styles.backdrop} aria-hidden="true" onClick={() => setIsOpen(false)}/>
 
@@ -27,7 +29,7 @@ function Modal({
 
                     <Dialog.Panel className={styles.panel}>
                         {beforeTitle}
-                        <Dialog.Title style={{textAlign: "center"}}>{title}</Dialog.Title>
+                        <Dialog.Title ref={titleRef} style={{textAlign: "center"}} >{title}</Dialog.Title>
                         <Dialog.Description>
                             {description}
                         </Dialog.Description>
