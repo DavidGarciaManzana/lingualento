@@ -1,7 +1,7 @@
 import React from "react"
 import {useRouter} from "next/router";
-import en from "../languages/en/en";
-import es from "../languages/es/es";
+import en from "../../languages/en/en";
+import es from "../../languages/es/es";
 
 export const LanguageContext = React.createContext({});
 

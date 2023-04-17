@@ -2,7 +2,7 @@
 // import App from '../pages/App/App'
 import React from "react"
 import App from '@/pages/App/App'
-import LanguageProvider from "@/LanguageProvider/LanguageProvider";
+import LanguageProvider from "@/pages/LanguageProvider/LanguageProvider";
 
 
 export default function Home() {

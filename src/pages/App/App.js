@@ -9,7 +9,7 @@ import LanguageToggleButton from "@/pages/LanguageToggleButton/LanguageToggleBut
 import TextForm from "@/pages/TextForm/TextForm";
 import UtilitiesForm from "@/pages/UtilitiesForm/UtilitiesForm";
 import Loader from '@/pages/Loader/Loader'
-import {LanguageContext} from '@/LanguageProvider/LanguageProvider'
+import {LanguageContext} from '@/pages/LanguageProvider/LanguageProvider'
 
 
 function App() {
@@ -94,7 +94,7 @@ function App() {
 
 
             <Modal isOpen={isDataModalOpen} setIsOpen={setIsDataModalOpen} title={"Here's your message :)"}>
-                <textarea style={{height: '50svh'}} ref={finalAnswerRef} className={styles.response}
+                <textarea style={{height: '50svh'}} ref={finalAnswerRef} autoFocus={false}
                           value={data}></textarea>
                 <button onClick={handleCopy}>Copy to clipboard</button>
             </Modal>

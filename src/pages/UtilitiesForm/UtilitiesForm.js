@@ -1,7 +1,7 @@
 import React from "react";
 import styles from '@/pages/UtilitiesForm/UtilitiesForm.module.css'
 import useChatGPTAPI from "@/hooks/useChatGPTAPI";
-import {LanguageContext} from "@/LanguageProvider/LanguageProvider";
+import {LanguageContext} from "@/pages/LanguageProvider/LanguageProvider";
 import button from "@/pages/Button/Button";
 
 function UtilitiesForm({textToFormat, handleData, handleError, handleLoading, setText, beforeModal}) {
