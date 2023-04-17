@@ -1,17 +1,25 @@
 import React from "react"
 import {useRouter} from "next/router";
+// import en from '../../languages/en/en';
+// import es from '../../languages/es/es';
 import en from "@/languages/en/en";
 import es from "@/languages/es/es";
 import Modal from "@/pages/Modal/Modal";
+// import Modal from "../Modal/Modal";
 import styles from '@/pages/App/App.module.css'
 import TopBar from "@/pages/TopBar/TopBar";
+// import TopBar from "../TopBar/TopBar";
 import Hero from '@/pages/Hero/Hero'
+// import Hero from '../Hero/Hero'
 import LanguageToggleButton from "@/pages/LanguageToggleButton/LanguageToggleButton";
+// import LanguageToggleButton from "../LanguageToggleButton/LanguageToggleButton";
 import TextForm from "@/pages/TextForm/TextForm";
+// import TextForm from "../TextForm/TextForm";
 import UtilitiesForm from "@/pages/UtilitiesForm/UtilitiesForm";
+// import UtilitiesForm from "../UtilitiesForm/UtilitiesForm";
 import Loader from '@/pages/Loader/Loader'
+// import Loader from '../Loader/Loader'
 
-// import useChatGPTAPI from "@/hooks/useChatGPTAPI";
 
 function App() {
 
@@ -35,16 +43,16 @@ function App() {
     const [isDataModalOpen, setIsDataModalOpen] = React.useState(false)
     const [isErrorModalOpen, setIsErrorModalOpen] = React.useState(false)
 
-    React.useEffect(()=>{
-        if(data){
+    React.useEffect(() => {
+        if (data) {
             setIsDataModalOpen(true)
         }
-    },[data])
-    React.useEffect(()=>{
-        if(error){
+    }, [data])
+    React.useEffect(() => {
+        if (error) {
             setIsErrorModalOpen(true)
         }
-    },[error])
+    }, [error])
 
     const handleData = (i) => {
         setData(i)
@@ -57,12 +65,21 @@ function App() {
     }
 
     const finalAnswerRef = React.useRef()
+
     function handleCopy() {
-        navigator.clipboard.writeText(finalAnswerRef.current.value);
+        if(finalAnswerRef) {
+            navigator.clipboard.writeText(finalAnswerRef.current.value)
+                .then(() => {
+                    window.alert('Text copied to clipboard successfully!');
+                })
+                .catch((error) => {
+                    window.alert('Error copying text to clipboard:' + error);
+                });
+        }
+
     }
 
-    return (
-        <div className={styles.app}>
+    return (<div className={styles.app}>
             <Modal scrollBar={true} isOpen={initialModalIsOpen} setIsOpen={setInitialModalIsOpen}
                    beforeTitle={<LanguageToggleButton/>} title={t.initialModalTitle}
                    closeButtonText={t.initialModalCloseButton}>{t.initialModalDescription}</Modal>
@@ -71,27 +88,30 @@ function App() {
                           nextModal={setInputSelectModal}></TextForm>
             </Modal>
             <Modal isOpen={inputSelectModal} setIsOpen={setInputSelectModal}>
-                <UtilitiesForm textToFormat={textToFormat} handleData={handleData} handleError={handleError} handleLoading={handleLoading} data={data} error={error} isLoading={isLoading} setText={setTextToFormat}
+                <UtilitiesForm textToFormat={textToFormat} handleData={handleData} handleError={handleError}
+                               handleLoading={handleLoading} data={data} error={error} isLoading={isLoading}
+                               setText={setTextToFormat}
                                beforeModal={setInputSelectModal}></UtilitiesForm>
 
 
             </Modal>
 
 
-            <Modal isOpen={isDataModalOpen} setIsOpen={setIsDataModalOpen} title={"Here's your message :)"} >
-                <textarea style={{height:'50svh'}} ref={finalAnswerRef}  disabled={true} className={styles.response} value={data}></textarea>
+            <Modal isOpen={isDataModalOpen} setIsOpen={setIsDataModalOpen} title={"Here's your message :)"}>
+                <textarea style={{height: '50svh'}} ref={finalAnswerRef} disabled={true} className={styles.response}
+                          value={data}></textarea>
                 <button onClick={handleCopy}>Copy to clipboard</button>
             </Modal>
-            <Modal isOpen={isErrorModalOpen} setIsOpen={setIsErrorModalOpen} title={"Something went wrong"} closeButtonText={'Accept :('}>
-                <p>Error: Ha ocurrido un error</p> {/*todo error.message?*/}
+            <Modal isOpen={isErrorModalOpen} setIsOpen={setIsErrorModalOpen} title={"Something went wrong"}
+                   closeButtonText={'Accept :('}>
+                <p>Error: Error</p> {/*todo error.message?*/}
             </Modal>
             {isLoading && <Loader></Loader>}
 
 
             <TopBar toggleInitialModal={setInitialModalIsOpen}/>
             <Hero openModal={setInputTextModal} salute={t.heroWelcome} text={t.heroText} button={t.heroButton}></Hero>
-        </div>
-    )
+        </div>)
 }
 
 export default App
