@@ -1,6 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# Lingualento Project
+
+[![Testing]](https://youtu.be/XIhIJJqZ4-g)
+
+
+
+
+
+Welcome to Lingualento!
+
+As a non-native English speaker, I understand the difficulties of crafting well-written text. That's why I created this application. Recently, I started using GPT as a language model to enhance the quality of my text, from emails to social media posts, and even messages to my closest friends. I found that using this model not only improved the presentation of my text, but it also helped me learn new words and concepts to better articulate my ideas.
+
+This application allows you to rewrite and reformat your text in the tone, format, and size you prefer. It doesn't matter if you make grammar mistakes or struggle with putting your ideas together; this application is designed to help you improve your writing skills.
+
+To develop this web application, I used React as I am currently learning it and wanted to improve my capabilities in this technology. I also used Next.js because I found a couple of its features interesting for this project. However, one of the challenges I faced while developing this project was prompting the AI to provide the best possible answer while maintaining stability to ensure consistent results. Additionally, I had to figure out the best practices to use every time. While I recognize that my code quality may not be perfect yet, every day I am becoming more comfortable with this technology.
+
+I hope you enjoy using this application and that it helps you enhance your writing skills as much as it has helped me!
+
+## Instructions
+
+1.- Click on the 'Get started!' button. \
+2.- Write the text you want to reformat. It doesn't matter if you misspell words, make grammar mistakes, or if your ideas are not well put together.\
+3.- Click on the 'Next' button. \
+4.- Choose the tone, format, and size that you want your text to have. \
+5.- Click the 'Submit' button. \
+6.- Click on the 'Copy to clipboard' button and enjoy your re-factorized text.
 
 ## Getting Started
+
+This is a Next.js project bootstrapped with create-next-app.
 
 First, run the development server:
 
@@ -12,27 +40,4 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open http://localhost:3000 with your browser to see the result.
