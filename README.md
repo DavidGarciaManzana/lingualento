@@ -1,24 +1,16 @@
 
 # Lingualento Project
 
-<style>
-  .image-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .image-group img {
-    display: inline-block;
-    margin: 10px;
-  }
-</style>
-
-<div class="image-group">
-  <img src="https://github.com/DavidGarciaManzana/lingualento/blob/main/public/test1.jpeg" alt="alt text" />
-  <img src="https://github.com/DavidGarciaManzana/lingualento/blob/main/public/test2.jpeg" alt="alt text" />
-  <img src="https://github.com/DavidGarciaManzana/lingualento/blob/main/public/test3.jpeg" alt="alt text" />
+<div align="center" style=" width:100px; height:500px;">
+  <img src="https://github.com/DavidGarciaManzana/lingualento/blob/main/public/test1.jpeg" alt="alt text" style="display:inline-block; margin:10px; height:500px;"/>
+  <img src="https://github.com/DavidGarciaManzana/lingualento/blob/main/public/test2.jpeg" alt="alt text" style="display:inline-block; margin:10px; height:500px;"/>
+  <img src="https://github.com/DavidGarciaManzana/lingualento/blob/main/public/test3.jpeg" alt="alt text" style="display:inline-block; margin:10px; height:500px;"/>
 </div>
-
+<div align="center" style=" width:100px; height:500px;">
+  <img src="https://github.com/DavidGarciaManzana/lingualento/blob/main/public/test4.jpeg" alt="alt text" style="display:inline-block; margin:10px; height:500px;"/>
+  <img src="https://github.com/DavidGarciaManzana/lingualento/blob/main/public/test5.jpeg" alt="alt text" style="display:inline-block; margin:10px; height:500px;"/>
+  <img src="https://github.com/DavidGarciaManzana/lingualento/blob/main/public/test6.jpeg" alt="alt text" style="display:inline-block; margin:10px; height:500px;"/>
+</div>
 
 
 [Click here to watch a video on how the web works!](https://youtu.be/XIhIJJqZ4-g)
