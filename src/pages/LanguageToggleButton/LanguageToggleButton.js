@@ -10,12 +10,15 @@ function LanguageToggleButton() {
     const switchBalls = ['translateRight', 'translateLeft']
     const router = useRouter()
     const {locale} = useRouter();
-    let language = locale !== 'en'
+    // const [language,setLanguage] = React.useState(locale !== 'en')
     let changeLanguage = () => {
         if (locale === 'en') {
             router.push('/', '/', {locale: 'es'})
+            // setLanguage(true)
         } else {
             router.push('/', '/', {locale: 'en'})
+            // setLanguage(false)
+
         }
     };
 
@@ -24,7 +27,7 @@ function LanguageToggleButton() {
             return styles[item] + ' '
         })}`} ballClassName={`${switchBalls.map((item) => {
             return styles[item] + ' '
-        })}`} toggleFunction={changeLanguage} state={language}></ToggleButton>
+        })}`} toggleFunction={changeLanguage} state={locale !== 'en'}></ToggleButton>
     )
 }
 

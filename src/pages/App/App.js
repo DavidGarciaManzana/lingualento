@@ -10,6 +10,7 @@ import TextForm from "@/pages/TextForm/TextForm";
 import UtilitiesForm from "@/pages/UtilitiesForm/UtilitiesForm";
 import Loader from '@/pages/Loader/Loader'
 import {LanguageContext} from '@/pages/LanguageProvider/LanguageProvider'
+import ToggleButton from "@/pages/ToggleButton/ToggleButton";
 
 
 function App() {
@@ -66,7 +67,8 @@ function App() {
 
     }
 
-    return (<div className={styles.app}>
+    return (
+        <div className={styles.app}>
             <Modal scrollBar={true} isOpen={initialModalIsOpen} setIsOpen={setInitialModalIsOpen}
                    beforeTitle={<LanguageToggleButton/>} title={t?.initialModalTitle}
                    closeButtonText={t?.initialModalCloseButton}>{t?.initialModalWelcome}
@@ -82,7 +84,7 @@ function App() {
             </Modal>
             <Modal isOpen={inputTextModal} setIsOpen={setInputTextModal}>
                 <TextForm text={textToFormat} setText={setTextToFormat} beforeModal={setInputTextModal}
-                          nextModal={setInputSelectModal}></TextForm>
+                          nextModal={setInputSelectModal} label={t.textFormLabel}></TextForm>
             </Modal>
             <Modal isOpen={inputSelectModal} setIsOpen={setInputSelectModal}>
                 <UtilitiesForm textToFormat={textToFormat} handleData={handleData} handleError={handleError}
@@ -94,14 +96,14 @@ function App() {
             </Modal>
 
 
-            <Modal isOpen={isDataModalOpen} setIsOpen={setIsDataModalOpen} title={"Here's your message :)"}>
+            <Modal isOpen={isDataModalOpen} setIsOpen={setIsDataModalOpen} title={t?.dataModalHappyAnswer}>
                 <textarea style={{height: '30svh'}} ref={finalAnswerRef} autoFocus={false}
                           value={data} onChange={(e)=>{setData(e.target.value)}}></textarea>
-                <button onClick={handleCopy}>Copy to clipboard</button>
+                <button style={{marginTop:'10px'}} onClick={handleCopy}>{t?.dataModalCopy}</button>
             </Modal>
-            <Modal isOpen={isErrorModalOpen} setIsOpen={setIsErrorModalOpen} title={"Something went wrong"}
-                   closeButtonText={'Accept :('}>
-                <p>Error: Error</p> {/*todo error.message?*/}
+            <Modal isOpen={isErrorModalOpen} setIsOpen={setIsErrorModalOpen} title={t?.errorModalErrorMessage}
+                   closeButtonText={t?.errorModalButton}>
+                <p>Error: {error}</p>
             </Modal>
             {isLoading && <Loader></Loader>}
 

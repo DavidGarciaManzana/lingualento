@@ -20,22 +20,11 @@ export default {
     fifthInstruction: "Click the 'Submit' button.",
     sixthInstruction: "Click on the 'Copy to clipboard' button and enjoy your re-factorized text.",
     initialModalWelcome:"Say goodbye to writer's block and hello to effortless writing. Our app helps you unleash your creativity, streamline your ideas, and put your thoughts into words with ease. From tweets to emails, we've got you covered. Discover a new world of writing today.",
-    initialModalDescription:
-        'When the user opens the application, they will see an empty text field where they can write the text they want to format.\n' +
-        '\n' +
-        'Next to that text field, there will be a dropdown option that will allow the user to select the writing style they want. Some examples of styles could be: friendly, formal, persuasive, humorous, etc.\n' +
-        '\n' +
-        'There will also be a second dropdown option so that the user can choose the format in which they want to present the text. Some options could be: email, tweet, letter, essay, etc.\n' +
-        '\n' +
-        'Finally, there will be a third dropdown option where the user can select the length they want for the text. The possible values could be: short, medium or long.\n' +
-        '\n' +
-        'Once the user has selected their preferences, they can click a "Format" button so that the app processes the text and presents it in the selected format and style.\n' +
-        '\n' +
-        'The formatted text will be displayed on a separate screen, where the user can copy and paste it wherever they want.',
     initialModalCloseButton: 'Got it, thanks!',
     heroWelcome: 'Hello!',
     heroText:'Style your text like a pro!',
     heroButton: 'Get Started!',
+    textFormLabel:'Write your message: ',
     textFormNextButton:'Next',
     utilitiesFormToneLabel:'Tone',
     utilitiesFormFormatLabel:'Format',
@@ -43,4 +32,8 @@ export default {
     utilitiesFormSizeSmall:'Small',
     utilitiesFormSizeMedium:'Medium',
     utilitiesFormSizeLarge:'Large',
+    dataModalHappyAnswer: "Here's your message 👀",
+    dataModalCopy:'Copy to clipboard',
+    errorModalErrorMessage:'Something went wrong 😔',
+    errorModalButton:"That's ok, I'll try later"
 }

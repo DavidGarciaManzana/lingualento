@@ -13,7 +13,6 @@ function UseChatGPTAPI({textToFormat,rangeText,tone,format}) {
         promting= `${process.env.NEXT_PUBLIC_SPANISHTEXTPROMPT} ${textToFormat}, ${tone}, ${format}, y ${rangeText}.`
     }
 
-console.log(promting)
     async function handleTextAPI() {
 
         try {

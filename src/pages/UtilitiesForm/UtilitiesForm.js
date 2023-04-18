@@ -10,10 +10,7 @@ function UtilitiesForm({textToFormat, handleData, handleError, handleLoading, se
     const [rangeText, setRangeText] = React.useState(t?.utilitiesFormSizeSmall);
     const [tone, setTone] = React.useState(t?.professional);
     const [format, setFormat] = React.useState(t?.email);
-    React.useEffect(() => {
-        console.log(rangeText)
-        console.log('tipo del mensaje', typeof (textToFormat))
-    }, [rangeText])
+
     const handleRangeChange = (event) => {
         setRange(event.target.valueAsNumber);
         if (event.target.valueAsNumber === 0) {
