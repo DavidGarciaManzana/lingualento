@@ -1,7 +1,7 @@
 
 # Lingualento Project
 
-[![Testing]](https://youtu.be/XIhIJJqZ4-g)
+[![Click here to watch a video on how the web works!]](https://youtu.be/XIhIJJqZ4-g)
 
 
 
