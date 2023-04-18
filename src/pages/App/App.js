@@ -85,7 +85,7 @@ function App() {
             </Modal>
             <Modal isOpen={inputTextModal} setIsOpen={setInputTextModal}>
                 <TextForm text={textToFormat} setText={setTextToFormat} beforeModal={setInputTextModal}
-                          nextModal={setInputSelectModal} label={t.textFormLabel}></TextForm>
+                          nextModal={setInputSelectModal} label={t?.textFormLabel}></TextForm>
             </Modal>
             <Modal isOpen={inputSelectModal} setIsOpen={setInputSelectModal}>
                 <UtilitiesForm textToFormat={textToFormat} handleData={handleData} handleError={handleError}
