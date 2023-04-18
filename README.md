@@ -1,8 +1,24 @@
 
 # Lingualento Project
-<img style="display:inline-block" src="https://github.com/DavidGarciaManzana/lingualento/blob/main/public/test1.jpeg" alt="alt text" width="300" height="600"/>
-<img style="display:inline-block" src="https://github.com/DavidGarciaManzana/lingualento/blob/main/public/test2.jpeg" alt="alt text" width="300" height="600"/>
-<img style="display:inline-block" src="https://github.com/DavidGarciaManzana/lingualento/blob/main/public/test3.jpeg" alt="alt text" width="300" height="600"/>
+
+<style>
+  .image-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-group img {
+    display: inline-block;
+    margin: 10px;
+  }
+</style>
+
+<div class="image-group">
+  <img src="https://github.com/DavidGarciaManzana/lingualento/blob/main/public/test1.jpeg" alt="alt text" />
+  <img src="https://github.com/DavidGarciaManzana/lingualento/blob/main/public/test2.jpeg" alt="alt text" />
+  <img src="https://github.com/DavidGarciaManzana/lingualento/blob/main/public/test3.jpeg" alt="alt text" />
+</div>
+
 
 
 [Click here to watch a video on how the web works!](https://youtu.be/XIhIJJqZ4-g)
