@@ -1,5 +1,7 @@
 
 # Lingualento Project
+<img src="https://github.com/DavidGarciaManzana/lingualento/blob/main/public/test1.jpeg" alt="alt text" width="100" height="200"/>
+
 
 [Click here to watch a video on how the web works!](https://youtu.be/XIhIJJqZ4-g)
 
