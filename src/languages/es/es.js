@@ -1,4 +1,5 @@
 export default {
+    required:'Completa este campo',
     submitButton: 'Enviar',
     email: 'Correo Electrónico',
     tweet: 'Tweet',

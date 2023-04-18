@@ -1,4 +1,5 @@
 export default {
+    required:'This field is required',
     submitButton:'Submit',
     email:'Email',
     tweet:'Tweet',
