@@ -12,6 +12,13 @@
 
 .heroImage {
     height: 50%;
+    max-height: 380px;
+}
+
+@media only screen and (min-width: 769px) {
+    .heroImage{
+        max-height:580px
+    }
 }
 .content {
 }
