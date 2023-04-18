@@ -19,7 +19,7 @@ export default {
     fourthInstruction: "Choose the tone, format, and size that you want your text to have.",
     fifthInstruction: "Click the 'Submit' button.",
     sixthInstruction: "Click on the 'Copy to clipboard' button and enjoy your re-factorized text.",
-    initialModalWelcome:"Say goodbye to writer's block and hello to effortless writing. Our app helps you unleash your creativity, streamline your ideas, and put your thoughts into words with ease. From tweets to emails, we've got you covered. Discover a new world of writing today.",
+    initialModalWelcome:"Say goodbye to writer's block and hello to effortless writing. Unleash your creativity, streamline your ideas, and put your thoughts into words with ease. From tweets to emails, we've got you covered. Discover a new world of writing today.",
     initialModalCloseButton: 'Got it, thanks!',
     heroWelcome: 'Hello!',
     heroText:'Style your text like a pro!',

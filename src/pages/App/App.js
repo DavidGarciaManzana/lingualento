@@ -71,7 +71,8 @@ function App() {
         <div className={styles.app}>
             <Modal scrollBar={true} isOpen={initialModalIsOpen} setIsOpen={setInitialModalIsOpen}
                    beforeTitle={<LanguageToggleButton/>} title={t?.initialModalTitle}
-                   closeButtonText={t?.initialModalCloseButton}>{t?.initialModalWelcome}
+                   closeButtonText={t?.initialModalCloseButton}>
+                <p className={styles.welcomeMessage}>{t?.initialModalWelcome}</p>
                 <h3>{t?.instructions}</h3>
             <ol className={styles.orderList}>
                 <li>{t?.firstInstruction}</li>

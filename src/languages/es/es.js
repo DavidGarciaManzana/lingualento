@@ -18,7 +18,7 @@ export default {
     fourthInstruction: "Elige el tono, el formato y el tamaño que te gustaría que tenga tu texto.",
     fifthInstruction: "Da click en el botón 'Enviar'.",
     sixthInstruction: "Da click en el botón 'Copiar al portapapeles' y disfruta de tu mensaje.",
-    initialModalWelcome: "Si eres de los que luchan con las palabras al escribir, o estas aprendiendo Español, esta es la solución. Con ella podrás convertir tus ideas en textos claros y concisos, sin importar la dificultad del tema.",
+    initialModalWelcome: "Si eres de los que luchan con las palabras al escribir, o estas aprendiendo Español, esta es la solución. Aquí podrás convertir tus ideas en textos claros y concisos, sin importar la dificultad del tema.",
     initialModalTitle: 'Bienvenido a Lingualento',
     initialModalCloseButton: 'Vamos a darle!',
     heroWelcome: '¡Hola!',

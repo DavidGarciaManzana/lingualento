@@ -10,15 +10,11 @@ function LanguageToggleButton() {
     const switchBalls = ['translateRight', 'translateLeft']
     const router = useRouter()
     const {locale} = useRouter();
-    // const [language,setLanguage] = React.useState(locale !== 'en')
     let changeLanguage = () => {
         if (locale === 'en') {
             router.push('/', '/', {locale: 'es'})
-            // setLanguage(true)
         } else {
             router.push('/', '/', {locale: 'en'})
-            // setLanguage(false)
-
         }
     };
 

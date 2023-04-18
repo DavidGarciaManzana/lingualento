@@ -29,7 +29,7 @@ function Modal({
 
                     <Dialog.Panel className={styles.panel}>
                         {beforeTitle}
-                        <Dialog.Title ref={titleRef} style={{textAlign: "center"}} >{title}</Dialog.Title>
+                        <Dialog.Title ref={titleRef} style={{textAlign: "center",marginTop:'10px'}} >{title}</Dialog.Title>
                         <Dialog.Description>
                             {description}
                         </Dialog.Description>
