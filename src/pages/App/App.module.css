@@ -26,3 +26,7 @@
     margin-bottom: 10px;
     margin-top: 10px;
 }
+.finalDataModal{
+    max-height: 35svh;
+    height: 250px;
+}

@@ -98,7 +98,7 @@ function App() {
 
 
             <Modal isOpen={isDataModalOpen} setIsOpen={setIsDataModalOpen} title={t?.dataModalHappyAnswer}>
-                <textarea style={{height: '30svh'}} ref={finalAnswerRef} autoFocus={false}
+                <textarea className={styles.finalDataModal} ref={finalAnswerRef} autoFocus={false}
                           value={data} onChange={(e)=>{setData(e.target.value)}}></textarea>
                 <button style={{marginTop:'10px'}} onClick={handleCopy}>{t?.dataModalCopy}</button>
             </Modal>
