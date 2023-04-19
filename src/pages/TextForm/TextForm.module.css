@@ -1,10 +1,12 @@
 .textBox {
     resize: none;
     display: block;
-    height: 30svh;
+    max-height: 30svh;
+    height: 230px;
     width: 50svw;
     margin-bottom: 10px;
 }
+
 .textForm{
     display: flex;
     flex-direction: column;
