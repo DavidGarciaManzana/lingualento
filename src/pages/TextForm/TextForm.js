@@ -9,7 +9,7 @@ function TextForm({text, setText, beforeModal, nextModal, label = null}) {
             if (text.length < 15) {
 
                 return `${t?.minLengthMessage}`;
-            } 
+            }
         }
 
         return ''
@@ -27,7 +27,7 @@ function TextForm({text, setText, beforeModal, nextModal, label = null}) {
                       value={text} onChange={(e) => {
                 setText(e.currentTarget.value)
             }} className={styles.textBox}></textarea>
-            <div>{minLengthValidation()}</div>
+            <div className={styles.alertLengthMessage}>{minLengthValidation()}</div>
             <button disabled={minLengthValidation() !== ''} type={"submit"}>{t?.textFormNextButton}
             </button>
         </form>

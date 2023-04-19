@@ -10,3 +10,12 @@
     flex-direction: column;
     align-items: center;
 }
+.alertLengthMessage{
+    max-width: 157px;
+    margin-bottom: 10px;
+}
+@media only screen and (min-width: 500px) {
+    .alertLengthMessage{
+        max-width: none;
+    }
+}
