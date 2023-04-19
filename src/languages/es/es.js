@@ -1,4 +1,5 @@
 export default {
+    minLengthMessage: 'El área de texto debe tener al menos 15 caracteres de longitud.',
     required:'Completa este campo',
     submitButton: 'Enviar',
     email: 'Correo Electrónico',
