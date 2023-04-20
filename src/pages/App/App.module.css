@@ -1,33 +1,43 @@
 .app {
     height: 100dvh;
     position: relative;
-    background: rgb(117,119,97);
-    background: linear-gradient(0deg, rgba(117,119,97,1) 0%, rgba(221,219,168,1) 30%, rgba(221,219,168,1) 87%, rgba(184,225,255,1) 100%);
+    background: rgb(117, 119, 97);
+    background: linear-gradient(0deg, rgba(117, 119, 97, 1) 0%, rgba(221, 219, 168, 1) 30%, rgba(221, 219, 168, 1) 87%, rgba(184, 225, 255, 1) 100%);
 }
+
 .orderList {
     text-align: justify;
     list-style: none;
     counter-reset: cupcake;
     /*padding-left: 32px;*/
 }
+
 .orderList li {
     counter-increment: cupcake;
 }
+
 .orderList li:before {
     content: counters(cupcake, '.') ' ';
     color: hotpink;
     font-weight: bold;
     font-family: cursive;
 }
+
 .response {
     height: 30svh;
 }
-.welcomeMessage{
+
+.welcomeMessage {
     text-align: justify;
     margin-bottom: 10px;
     margin-top: 10px;
 }
-.finalDataModal{
+
+.finalDataModal {
     max-height: 35svh;
     height: 250px;
+    resize: none;
+    display: block;
+    width: 50svw;
+    margin-bottom: 10px;
 }

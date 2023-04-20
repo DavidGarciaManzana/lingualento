@@ -19,7 +19,6 @@ function App() {
     const [inputSelectModal, setInputSelectModal] = React.useState(false)
 
 
-
     const [data, setData] = React.useState('');
     const [error, setError] = React.useState(null);
     const [isLoading, setIsLoading] = React.useState(false);
@@ -52,7 +51,7 @@ function App() {
     const finalAnswerRef = React.useRef()
 
     function handleCopy() {
-        if(finalAnswerRef) {
+        if (finalAnswerRef) {
             navigator.clipboard.writeText(finalAnswerRef.current.value)
                 .then(() => {
                     window.alert('Text copied to clipboard successfully!');
@@ -71,14 +70,14 @@ function App() {
                    closeButtonText={t?.initialModalCloseButton}>
                 <p className={styles.welcomeMessage}>{t?.initialModalWelcome}</p>
                 <h3>{t?.instructions}</h3>
-            <ol className={styles.orderList}>
-                <li>{t?.firstInstruction}</li>
-                <li>{t?.secondInstruction}</li>
-                <li>{t?.thirdInstruction}</li>
-                <li>{t?.fourthInstruction}</li>
-                <li>{t?.fifthInstruction}</li>
-                <li>{t?.sixthInstruction}</li>
-            </ol>
+                <ol className={styles.orderList}>
+                    <li>{t?.firstInstruction}</li>
+                    <li>{t?.secondInstruction}</li>
+                    <li>{t?.thirdInstruction}</li>
+                    <li>{t?.fourthInstruction}</li>
+                    <li>{t?.fifthInstruction}</li>
+                    <li>{t?.sixthInstruction}</li>
+                </ol>
             </Modal>
             <Modal isOpen={inputTextModal} setIsOpen={setInputTextModal}>
                 <TextForm text={textToFormat} setText={setTextToFormat} beforeModal={setInputTextModal}
@@ -95,9 +94,13 @@ function App() {
 
 
             <Modal isOpen={isDataModalOpen} setIsOpen={setIsDataModalOpen} title={t?.dataModalHappyAnswer}>
+
                 <textarea className={styles.finalDataModal} ref={finalAnswerRef} autoFocus={false}
-                          value={data} onChange={(e)=>{setData(e.target.value)}}></textarea>
-                <button style={{marginTop:'10px'}} onClick={handleCopy}>{t?.dataModalCopy}</button>
+                          value={data} onChange={(e) => {
+                    setData(e.target.value)
+                }}></textarea>
+                    <button style={{marginTop: '10px'}} onClick={handleCopy}>{t?.dataModalCopy}</button>
+
             </Modal>
             <Modal isOpen={isErrorModalOpen} setIsOpen={setIsErrorModalOpen} title={t?.errorModalErrorMessage}
                    closeButtonText={t?.errorModalButton}>
@@ -107,7 +110,8 @@ function App() {
 
 
             <TopBar toggleInitialModal={setInitialModalIsOpen}/>
-            <Hero openModal={setInputTextModal} salute={t?.heroWelcome} text={t?.heroText} button={t?.heroButton}></Hero>
+            <Hero openModal={setInputTextModal} salute={t?.heroWelcome} text={t?.heroText}
+                  button={t?.heroButton}></Hero>
         </div>)
 }
 
