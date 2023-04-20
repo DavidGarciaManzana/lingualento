@@ -24,7 +24,7 @@ function Modal({
             }`}>
 
                 {/* Container to center the panel */}
-                <div className={styles.panelContainer}>
+                <div className={`${scrollBar ? styles.panelContainer : styles.panelContainerInTheTop}`}>
 
                     <Dialog.Panel className={styles.panel}>
                         {beforeTitle}
