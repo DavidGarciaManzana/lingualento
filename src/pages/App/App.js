@@ -1,6 +1,4 @@
 import React from "react"
-// import en from '../../languages/en/en';
-// import es from '../../languages/es/es';
 import Modal from "@/pages/Modal/Modal";
 import styles from '@/pages/App/App.module.css'
 import TopBar from "@/pages/TopBar/TopBar";

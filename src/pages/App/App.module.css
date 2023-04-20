@@ -1,6 +1,8 @@
 .app {
     height: 100dvh;
     position: relative;
+    background: rgb(117,119,97);
+    background: linear-gradient(0deg, rgba(117,119,97,1) 0%, rgba(221,219,168,1) 30%, rgba(221,219,168,1) 87%, rgba(184,225,255,1) 100%);
 }
 .orderList {
     text-align: justify;
@@ -13,7 +15,6 @@
 }
 .orderList li:before {
     content: counters(cupcake, '.') ' ';
-    /* Whatever custom styles you want here */
     color: hotpink;
     font-weight: bold;
     font-family: cursive;

@@ -16,10 +16,9 @@ function Modal({
 
     return (
         <Dialog initialFocus={titleRef} className={styles.modalContainer} open={isOpen} onClose={() => setIsOpen(false)}>
-            {/* The backdrop, rendered as a fixed sibling to the panel container */}
+
             <div className={styles.backdrop} aria-hidden="true" onClick={() => setIsOpen(false)}/>
 
-            {/* Full-screen scrollable container */}
             <div className={`${
                 scrollBar ? styles.scrollableContainer : styles.notScrollableContainer
             }`}>

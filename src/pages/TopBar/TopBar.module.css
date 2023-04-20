@@ -1,25 +1,15 @@
 .topBar {
-    /*position: fixed;*/
     display: flex;
     height: 70px;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(184,225,255,1);
-    /*background-color: #f4eccf;*/
-    /*border-bottom: 3px inset #e7dec3 ;*/
 }
 
 .modalButton {
-    /*background-color: #f4eccf;*/
     height: 100%;
     margin-left: 10px;
-    /*flex-basis: 0;*/
-    /*flex-grow: 1;*/
 }
 .twitterButton {
     margin-right: 10px;
-    /*height: 60%;*/
-    /*clip-path: polygon(7% 0, 93% 0, 100% 50%, 93% 100%, 7% 100%, 0 50%);*/
-    /*background-color: #f5c97f;*/
 }
