@@ -1,5 +1,5 @@
 export default {
-    minLengthMessage:'Textarea must be at least 15 characters long.',
+    minLengthMessage:'Textarea must be at least 10 characters long.',
     required:'This field is required',
     submitButton:'Submit',
     email:'Email',

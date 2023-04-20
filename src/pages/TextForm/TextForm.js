@@ -6,7 +6,7 @@ function TextForm({text, setText, beforeModal, nextModal, label = null}) {
     const {t} = React.useContext(LanguageContext);
     let minLengthValidation = () => {
         if(text){
-            if (text.length < 15) {
+            if (text.length < 10) {
 
                 return `${t?.minLengthMessage}`;
             }
