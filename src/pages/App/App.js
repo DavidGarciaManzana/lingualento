@@ -10,7 +10,6 @@ import TextForm from "@/pages/TextForm/TextForm";
 import UtilitiesForm from "@/pages/UtilitiesForm/UtilitiesForm";
 import Loader from '@/pages/Loader/Loader'
 import {LanguageContext} from '@/pages/LanguageProvider/LanguageProvider'
-import ToggleButton from "@/pages/ToggleButton/ToggleButton";
 
 
 function App() {

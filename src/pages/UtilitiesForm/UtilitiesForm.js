@@ -54,6 +54,7 @@ function UtilitiesForm({textToFormat, handleData, handleError, handleLoading, se
                     setTone(event.target.value)
                 }}>
                     <option value={t?.professional}>{t?.professional}</option>
+                    <option value={t?.friendly}>{t?.friendly}</option>
                     <option value={t?.informal}>{t?.informal}</option>
                     <option value={t?.enthusiast}>{t?.enthusiast}</option>
                     <option value={t?.informative}>{t?.informative}</option>

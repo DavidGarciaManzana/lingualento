@@ -8,6 +8,7 @@ export default {
     instantMessage: 'SMS/Whatsapp',
     blog: 'Blog',
     professional: 'Profesional',
+    friendly: 'Amigable',
     informal: 'Informal',
     enthusiast: 'Entusiasta',
     informative: 'Informativo',

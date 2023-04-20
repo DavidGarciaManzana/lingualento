@@ -28,7 +28,7 @@ function TextForm({text, setText, beforeModal, nextModal, label = null}) {
                 setText(e.currentTarget.value)
             }} className={styles.textBox}></textarea>
             <div className={styles.alertLengthMessage}>{minLengthValidation()}</div>
-            <button disabled={minLengthValidation() !== ''} type={"submit"}>{t?.textFormNextButton}
+            <button style={{alignSelf: 'end'}} disabled={minLengthValidation() !== ''} type={"submit"}>{t?.textFormNextButton}
             </button>
         </form>
     )

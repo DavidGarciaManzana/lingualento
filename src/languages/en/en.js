@@ -9,6 +9,7 @@ export default {
     blog:'Blog',
     initialModalTitle: 'Welcome to Lingualento',
     professional: 'Professional',
+    friendly:'Friendly',
     informal:'Informal',
     enthusiast:'Enthusiast',
     informative:'Informative',
