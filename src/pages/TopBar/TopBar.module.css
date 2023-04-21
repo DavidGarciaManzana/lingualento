@@ -9,11 +9,16 @@
 .modalButton {
     height: 100%;
     margin-left: 10px;
+    cursor: pointer;
 }
 .twitterButton {
     margin-right: 10px;
 }
 @media only screen and (min-width: 767px) {
+    .topBar{
+        position: relative;
+        z-index: 1;
+    }
     .title{
         font-size: 3.5rem;
     }

@@ -10,7 +10,6 @@ function TopBar({toggleInitialModal}) {
             <div className={styles.topBar}>
                 <Button className={styles.modalButton} onClick={()=>{toggleInitialModal(true)}}>
                     {viewportWidth < 769 ? <HelpCircle></HelpCircle> :  <HelpCircle strokeWidth={1} width={'100%'} height='100%'/>}
-
                 </Button>
                 <h1 className={styles.title}>Lingualento</h1>
                 <Button className={styles.twitterButton}>
