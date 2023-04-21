@@ -13,3 +13,20 @@
 .twitterButton {
     margin-right: 10px;
 }
+@media only screen and (min-width: 767px) {
+    .title{
+        font-size: 3.5rem;
+    }
+    .modalButton, .twitterButton {
+        border: none;
+        width: 100px;
+        height: 100%;
+    }
+
+    .link {
+        width: 100%;
+        display: block;
+        height: 100%;
+    }
+
+}
