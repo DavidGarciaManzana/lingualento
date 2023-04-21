@@ -91,7 +91,7 @@ function UtilitiesForm({textToFormat, handleData, handleError, handleLoading, se
                 <output name="range2value" htmlFor="formatSize">
                     {range === 2 ? t?.utilitiesFormSizeLarge : null}
                 </output>
-                <button type={"submit"}>{t?.submitButton}</button>
+                <button className={styles.getStartButton} type={"submit"}>{t?.submitButton}</button>
             </form>
 
         </>

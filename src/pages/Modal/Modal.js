@@ -15,7 +15,8 @@ function Modal({
     const titleRef = React.useRef()
 
     return (
-        <Dialog initialFocus={titleRef} className={styles.modalContainer} open={isOpen} onClose={() => setIsOpen(false)}>
+        <Dialog initialFocus={titleRef} className={styles.modalContainer} open={isOpen}
+                onClose={() => setIsOpen(false)}>
 
             <div className={styles.backdrop} aria-hidden="true" onClick={() => setIsOpen(false)}/>
 
@@ -28,7 +29,8 @@ function Modal({
 
                     <Dialog.Panel className={styles.panel}>
                         {beforeTitle}
-                        <Dialog.Title ref={titleRef} style={{textAlign: "center",marginTop:'10px'}} >{title}</Dialog.Title>
+                        <Dialog.Title ref={titleRef}
+                                      style={{textAlign: "center", marginTop: '10px'}}>{title}</Dialog.Title>
                         <Dialog.Description>
                             {description}
                         </Dialog.Description>
@@ -40,7 +42,8 @@ function Modal({
                             {children}
                         </div>
                         <br/>
-                        {closeButtonText && <button onClick={() => setIsOpen(false)}>{closeButtonText}</button>}
+                        {closeButtonText && <button className={styles.getStartButton}
+                                                    onClick={() => setIsOpen(false)}>{closeButtonText}</button>}
                     </Dialog.Panel>
                 </div>
             </div>

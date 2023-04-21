@@ -11,8 +11,8 @@ function Hero({openModal,salute,text,button}) {
                     <LanguageToggleButton></LanguageToggleButton>
                 </span>
 
-                <p>{text}</p>
-                <button onClick={()=>{openModal(true)}}>{button}</button>
+                <p style={{marginBottom:'10px'}}>{text}</p>
+                <button className={styles.getStartButton} onClick={()=>{openModal(true)}}>{button}</button>
             </div>
         </div>)
 }

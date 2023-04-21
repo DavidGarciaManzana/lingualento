@@ -99,7 +99,7 @@ function App() {
                           value={data} onChange={(e) => {
                     setData(e.target.value)
                 }}></textarea>
-                    <button style={{marginTop: '10px'}} onClick={handleCopy}>{t?.dataModalCopy}</button>
+                    <button className={styles.getStartButton} onClick={handleCopy}>{t?.dataModalCopy}</button>
 
             </Modal>
             <Modal isOpen={isErrorModalOpen} setIsOpen={setIsErrorModalOpen} title={t?.errorModalErrorMessage}
